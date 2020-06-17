@@ -23,14 +23,14 @@
 import Modal from './common/Modal.vue'
 
 export default {
-  data : function () {
+  data() {
     return {
       newTodoItem : "",
       showModal : false
     }
   },
   methods: {
-    addTodo : function () {
+    addTodo() {
       if (this.newTodoItem !== '') {
       this.$emit('addTodoItem', this.newTodoItem);
       this.celarInput();
@@ -38,12 +38,12 @@ export default {
         this.showModal = !this.showModal;
       }
     },
-    celarInput : function () {
+    celarInput() {
       this.newTodoItem = '';
     }
   },
   components: {
-    Modal : Modal
+    Modal
   }
 }
 </script>
